@@ -1,0 +1,11 @@
+*.caf
+*.m4a
+*.wav
+node_modules
+dbs.py
+config.js
+.DS_Store
+cyhm.json
+sequences/normal/rachel.sequence.js
+sequences/normal/test.sequence.js
+sequences/normal/copy-ip.sequence.js
