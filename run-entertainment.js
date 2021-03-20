@@ -31,13 +31,7 @@ async function run() {
 
             // Play Audio
             setTimeout(() => {
-                exec('afplay cyhm.m4a -r .5')
-                    // player.play("cyhm.m4a", (err) => {
-                    //     if (err) {
-                    //         console.log(err)
-                    //     }
-                    //     console.log('done')
-                    // });
+                exec('afplay cyhm.m4a')
             }, 1500)
 
             // heartbeat to ensure we maintain the connection

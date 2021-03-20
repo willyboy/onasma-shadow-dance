@@ -46,9 +46,7 @@ function volumeToBrightness(volumeData) {
 
 function setLight(light, body) {
     light++; // 0 based needs to be 1 based
-    //console.log(light, body.xy)
     body = Object.assign({ "on": true, transitiontime: 0 }, body);
-    //console.log(body)
     req({
         url: `https://${address}/api/${user}/lights/${light}/state`,
         method: 'PUT',
@@ -58,7 +56,7 @@ function setLight(light, body) {
         contentType: 'application/json'
     }, (err, res) => {
         if (err) {
-            console.log(err)
+            console.error(err)
         }
 
     })

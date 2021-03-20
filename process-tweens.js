@@ -6,7 +6,6 @@ module.exports = (sequence) => {
         for (let stepIndex = 0; stepIndex < settings.steps.length; stepIndex++) {
             const step = settings.steps[stepIndex]
             if (step.tween) {
-                console.log('tweeny')
                 const starterStep = cloneDeep(step);
                 starterStep.duration = 1;
                 const newSteps = [starterStep]
@@ -15,7 +14,7 @@ module.exports = (sequence) => {
                     if (nextLight) {
                         const brightnessDiff = nextLight[4] - light[4];
                         const numberOfNewSteps = Math.abs(Math.ceil(brightnessDiff / step.tween.interval));
-                        console.log(numberOfNewSteps, brightnessDiff, 'nnn')
+
                         for (let i = 1; i <= numberOfNewSteps; i++) {
                             if (!newSteps[i]) {
                                 newSteps[i] = {
@@ -41,6 +40,6 @@ module.exports = (sequence) => {
             }
         }
     });
-    console.log(JSON.stringify(sequence, null, 4))
+
     return sequence;
 }

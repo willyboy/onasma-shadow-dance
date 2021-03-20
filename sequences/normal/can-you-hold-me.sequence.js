@@ -1,6 +1,6 @@
 const colors = require('../../colors');
 const offState = { "on": false, transitiontime: 2 };
-const offStateNoDelay = { "on": false, transitiontime: 0 };
+const offStateNoDelay = { "on": false };
 const increasePulse = require('./increase-pulse.sequence')[0].steps;
 const countdown = [{
         lights: [
