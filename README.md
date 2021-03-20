@@ -29,3 +29,5 @@ Or if I wanted the can-you-hold-me sequence, I would do:
 ```
 node cli --sequence=can-you-hold-me
 ```
+
+**NOTE** The app does not currently detect the number of lights you have available. If you don't have enough lights to set a scene or run a sequence, you won't receive an error message.
